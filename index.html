@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master TOEFL - Latihan Soal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div id="top-progress" class="progress-top"></div>
+
+    <div class="app-container">
+        
+        <!-- Konten Utama (Kiri) -->
+        <div class="main-content">
+            <header class="header">
+                <div class="header-badge">Simulasi Ujian</div>
+                <h1 class="hero-title">Master TOEFL</h1>
+                <p class="subtitle">234 Soal Terintegrasi</p>
+                
+                <div class="score-card">
+                    <div class="score-item">
+                        <span class="score-label">Skor</span>
+                        <span class="score-value text-primary"><span id="score">0</span> <span class="divider">/</span> <span id="max-score" class="text-muted">234</span></span>
+                    </div>
+                    <div class="score-line"></div>
+                    <div class="score-item">
+                        <span class="score-label">Dijawab</span>
+                        <span class="score-value"><span id="answered">0</span> <span class="divider">/</span> <span id="max-answered" class="text-muted">234</span></span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="filter-bar" id="filter-bar">
+                <button data-filter="all" class="filter-btn active">Semua</button>
+                <button data-filter="structure" class="filter-btn">Structure 1</button>
+                <button data-filter="structure2" class="filter-btn">Structure 2</button>
+                <button data-filter="listening" class="filter-btn">Listening</button>
+                <button data-filter="reading" class="filter-btn">Reading 1</button>
+                <button data-filter="reading2" class="filter-btn">Reading 2</button>
+            </div>
+
+            <!-- JS akan menyuntikkan soal ke sini -->
+            <div id="quiz-area" class="quiz-area"></div>
+        </div>
+
+        <!-- Navigasi Soal (Kanan) -->
+        <aside class="sidebar">
+            <div class="sticky-nav">
+                <div class="nav-header">
+                    <h2>Navigasi</h2>
+                    <span id="progress-text" class="badge">0 / 0</span>
+                </div>
+                
+                <div id="nav-grid" class="nav-grid"></div>
+                
+                <div class="legend">
+                    <div class="legend-item"><span class="dot bg-green"></span> Benar</div>
+                    <div class="legend-item"><span class="dot bg-red"></span> Salah</div>
+                    <div class="legend-item"><span class="dot bg-gray"></span> Kosong</div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
